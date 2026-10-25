@@ -100,6 +100,9 @@ header nav {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
     white-space: nowrap;
     font-size: 1.05rem;
@@ -107,11 +110,12 @@ header nav {
     letter-spacing: -0.03em;
 }
 
-.logo::before {
-    content: "◆";
-    margin-right: 9px;
-    color: var(--accent);
-    font-size: 0.7rem;
+.logo-image {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 header ul {
