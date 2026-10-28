@@ -21,84 +21,107 @@
          HEADER
     ========================== -->
 
-    <header>
-        <nav aria-label="Main navigation">
+    
+<!-- HEADER -->
+<header>
+    <nav aria-label="Main navigation">
+        <a href="#home" class="logo">
+            <img
+                src="assets/Images/ThePrem_logo.png.png"
+                alt=""
+                class="logo-image"
+            >
+            <span>ThePrem Platform</span>
+        </a>
 
-            <a href="#home" class="logo">
-    <img
-        src="assets/Images/ThePrem_logo.png.png"
-        alt=""
-        class="logo-image"
-    >
-    <span>ThePrem Platform</span>
-</a>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+        >
+            ☰
+        </button>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#technology">Technology</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#resources">Resources</a></li>
-            </ul>
+        <ul id="main-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+</header>
 
-        </nav>
-    </header>
 
 
     <main id="main-content">
 
-        <!-- =========================
-             HERO
-        ========================== -->
 
-        <section id="home">
+<!-- =========================
+     HERO
+========================== -->
 
-            <p>BUILD. LEARN. TEACH. EXPLORE.</p>
+<section id="home" class="hero">
 
-            <h1>ThePrem Platform</h1>
+    <div class="hero-content">
 
-            <h2>
-                Teaching • Computer Science • Technology
-            </h2>
+        <p>BUILD. LEARN. TEACH. EXPLORE.</p>
 
-            <p>
-                A digital space for teaching, technology,
-                programming, projects and practical learning.
-            </p>
+        <h1>Prem Prakash Yadav</h1>
 
-            <div>
-                <a href="#explore">Explore Platform</a>
-                <a href="#projects">View Projects</a>
-            </div>
+        <h2>
+            Computer Science Educator • Developer • IT Enthusiast
+        </h2>
 
-        </section>
+        <p>
+            I am passionate about computer science education,
+            programming, web development, AI and practical
+            technology projects. Through ThePrem Platform,
+            I aim to learn, build, teach and share knowledge.
+        </p>
 
+        <div class="hero-buttons">
+            <a href="#explore">Explore Platform</a>
+            <a href="#projects">View Projects</a>
+        </div>
 
-        <!-- =========================
-             ABOUT PLATFORM
-        ========================== -->
+    </div>
 
-        <section id="about">
+    <div class="hero-image">
 
-            <p>ABOUT THE PLATFORM</p>
+        <img
+            src="assets/images/profile.jpg"
+            alt="Prem Prakash Yadav"
+            class="profile-photo"
+        >
 
-            <h2>
-                Where teaching meets technology.
-            </h2>
+    </div>
 
-            <p>
-                ThePrem Platform is a growing digital space
-                focused on computer science education,
-                technology, programming and practical projects.
-            </p>
+</section>
 
-            <p>
-                The goal is simple: learn, build, share
-                and make technology useful.
-            </p>
+<!-- ABOUT PLATFORM -->
 
-        </section>
+<section id="about">
+
+    <p>ABOUT THE PLATFORM</p>
+
+    <h2>Where teaching meets technology.</h2>
+
+    <p>
+        ThePrem Platform is my digital space for exploring
+        computer science, programming, web development,
+        AI and practical technology projects.
+    </p>
+
+    <p>
+        My mission is simple: learn, build, teach and share
+        knowledge to make technology useful.
+    </p>
+
+</section>
 
 
         <!-- =========================
@@ -326,17 +349,21 @@
         </section>
 
 
-        <!-- =========================
-             PROJECTS
-        ========================== -->
+<!-- =========================
+     PROJECTS & EXPERIMENTS
+========================== -->
 
-        <section id="projects">
+<section id="projects">
 
     <p>PROJECTS & EXPERIMENTS</p>
 
-    <h2>
-        Building ideas into useful things.
-    </h2>
+    <h2>Turning ideas into practical solutions.</h2>
+
+    <p>
+        A growing collection of projects, experiments and
+        practical solutions developed through learning,
+        teaching and exploring technology.
+    </p>
 
     <div class="platform-grid">
 
@@ -344,17 +371,18 @@
 
             <span class="card-number">01</span>
 
-            <h3>Education Projects</h3>
+            <h3>Educational Tools</h3>
 
             <p>
-                Practical tools and systems designed to
-                support teaching, students, assessment
-                and everyday academic work.
+                Digital tools and practical systems designed
+                to support teaching, student learning,
+                academic activities and assessment.
             </p>
 
             <div class="tag-list">
                 <span>Education</span>
-                <span>Tools</span>
+                <span>Productivity</span>
+                <span>Learning</span>
             </div>
 
         </article>
@@ -363,12 +391,12 @@
 
             <span class="card-number">02</span>
 
-            <h3>Programming Projects</h3>
+            <h3>Programming & Applications</h3>
 
             <p>
-                Programs and applications created while
-                learning, experimenting and solving real
-                programming problems.
+                Small programs, coding exercises and
+                application ideas developed to strengthen
+                programming skills and solve practical problems.
             </p>
 
             <div class="tag-list">
@@ -383,12 +411,12 @@
 
             <span class="card-number">03</span>
 
-            <h3>Web Projects</h3>
+            <h3>Web Development</h3>
 
             <p>
-                Websites and web-based experiments focused
-                on practical learning, digital presence
-                and useful online solutions.
+                Websites and interactive web experiences
+                built to explore modern web technologies,
+                improve digital presence and share useful content.
             </p>
 
             <div class="tag-list">
@@ -406,14 +434,53 @@
             <h3>AI & Automation</h3>
 
             <p>
-                Experiments with AI, automation and digital
-                workflows to explore how technology can
-                simplify repetitive tasks and learning.
+                Experiments using AI tools and digital
+                workflows to support content creation,
+                improve productivity and simplify everyday tasks.
             </p>
 
             <div class="tag-list">
-                <span>AI</span>
+                <span>Artificial Intelligence</span>
                 <span>Automation</span>
+            </div>
+
+        </article>
+
+        <article class="platform-card">
+
+            <span class="card-number">05</span>
+
+            <h3>ThePrem Platform</h3>
+
+            <p>
+                My personal digital platform for sharing
+                learning resources, showcasing projects,
+                documenting progress and connecting education
+                with practical technology.
+            </p>
+
+            <div class="tag-list">
+                <span>Personal Brand</span>
+                <span>Web Development</span>
+            </div>
+
+        </article>
+
+        <article class="platform-card">
+
+            <span class="card-number">06</span>
+
+            <h3>Experiments & New Ideas</h3>
+
+            <p>
+                An evolving space for prototypes, creative
+                experiments and new ideas explored through
+                continuous learning and hands-on practice.
+            </p>
+
+            <div class="tag-list">
+                <span>Innovation</span>
+                <span>Experimentation</span>
             </div>
 
         </article>
@@ -422,17 +489,24 @@
 
 </section>
 
-        <!-- =========================
-             RESOURCES
-        ========================== -->
+       
+<!-- =========================
+     LEARNING RESOURCES
+========================== -->
 
-        <section id="resources">
+<section id="resources">
 
     <p>LEARNING RESOURCES</p>
 
     <h2>
         Learn. Practice. Build.
     </h2>
+
+    <p>
+        A growing collection of learning materials,
+        practical exercises and digital tools to help
+        students understand concepts and build real skills.
+    </p>
 
     <div class="platform-grid">
 
@@ -443,12 +517,12 @@
             <h3>Study Notes</h3>
 
             <p>
-                Simple and structured notes covering
-                computer science concepts, programming
+                Organized notes, simplified explanations
+                and revision materials for computer science
                 and technical subjects.
             </p>
 
-            <a href="#">
+            <a href="#contact">
                 Explore Notes →
             </a>
 
@@ -461,12 +535,12 @@
             <h3>Programming</h3>
 
             <p>
-                Beginner-friendly programming examples,
-                exercises, explanations and practical
-                coding problems.
+                Programming concepts, code examples,
+                practice exercises and problem-solving
+                activities for different skill levels.
             </p>
 
-            <a href="#">
+            <a href="#projects">
                 Explore Programming →
             </a>
 
@@ -479,12 +553,12 @@
             <h3>Lab & Practical</h3>
 
             <p>
-                Practical exercises, lab tasks, project
-                ideas and activities designed for
-                learning by doing.
+                Lab exercises, practical assignments,
+                mini-projects and hands-on activities
+                focused on learning by doing.
             </p>
 
-            <a href="#">
+            <a href="#projects">
                 Explore Practical →
             </a>
 
@@ -494,16 +568,52 @@
 
             <span class="card-number">04</span>
 
+            <h3>Question Bank</h3>
+
+            <p>
+                Practice questions, revision exercises
+                and self-assessment materials to support
+                exam preparation and concept review.
+            </p>
+
+            <a href="#contact">
+                Explore Questions →
+            </a>
+
+        </article>
+
+        <article class="platform-card">
+
+            <span class="card-number">05</span>
+
             <h3>Useful Tools</h3>
 
             <p>
-                Useful software, websites, development
-                tools and digital resources for students,
-                teachers and creators.
+                Helpful software, websites, productivity
+                tools and development resources for
+                students, teachers and creators.
             </p>
 
-            <a href="#">
+            <a href="#contact">
                 Explore Tools →
+            </a>
+
+        </article>
+
+        <article class="platform-card">
+
+            <span class="card-number">06</span>
+
+            <h3>AI & Digital Resources</h3>
+
+            <p>
+                Explore AI tools, digital workflows,
+                creative technologies and resources
+                for learning, teaching and productivity.
+            </p>
+
+            <a href="#projects">
+                Explore AI Resources →
             </a>
 
         </article>
@@ -512,49 +622,82 @@
 
 </section>
 
+       
         <!-- =========================
              CONTACT
         ========================== -->
 
         <section id="contact">
 
-            <p>CONNECT</p>
-
             <h2>
                 Let's connect.
             </h2>
 
             <p>
-                Email:
-                <a href="mailto:theprem.edu@gmail.com">
-                    theprem.edu@gmail.com
-                </a>
+                Have a question, an idea, or an opportunity to collaborate?
+                Feel free to reach out through any of the platforms below.
             </p>
 
+            <div class="social-links">
+
+                <a
+                    href="https://www.facebook.com/ItsThePrem"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Facebook
+                </a>
+
+                <a
+                    href="https://wa.me/9779827715545"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
+
+                <a href="mailto:theprem.edu@gmail.com">
+                    Email Me
+                </a>
+
+            </div>
+
         </section>
+
 
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+  
+<!-- =========================
+     FOOTER
+========================== -->
 
-    <footer>
+<footer class="site-footer">
 
-        <p>
-            © 2026 ThePrem Platform.
-        </p>
+    <a href="#home" class="footer-brand">
+        ThePrem <span>Platform</span>
+    </a>
 
-        <p>
-            Teaching • Computer Science • Technology
-        </p>
+    <p class="footer-tagline">
+        Learn. Build. Teach. Explore.
+    </p>
 
-    </footer>
+    <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
 
+    <div class="footer-bottom">
+        <p>© 2026 ThePrem Platform. All rights reserved.</p>
+        <p>Built with curiosity and a passion for technology.</p>
+    </div>
 
-    <script src="script.js"></script>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>

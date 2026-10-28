@@ -105,3 +105,29 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach((section) => {
     sectionObserver.observe(section);
 });
+
+
+const menuToggle = document.querySelector(".menu-toggle");
+const mainMenu = document.querySelector("#main-menu");
+
+if (menuToggle && mainMenu) {
+    menuToggle.addEventListener("click", () => {
+        const isOpen = mainMenu.classList.toggle("is-open");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    mainMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            mainMenu.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+            menuToggle.textContent = "☰";
+        });
+    });
+}

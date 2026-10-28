@@ -153,16 +153,20 @@ header ul a.active::after {
 }
 
 /* 5. GLOBAL SECTIONS / TYPOGRAPHY */
-main > section {
-    padding: 110px 0;
+main>section {
+    padding: 80px 0;
     border-bottom: 1px solid var(--border);
 }
 
-main > section:last-child {
+main>section#home {
+    padding: 0;
+}
+
+main>section:last-child {
     border-bottom: none;
 }
 
-section > p:first-child {
+section>p:first-child {
     margin-bottom: 18px;
     color: var(--accent);
     font-size: 0.72rem;
@@ -179,7 +183,7 @@ section h2 {
     letter-spacing: -0.04em;
 }
 
-section > p:not(:first-child) {
+section>p:not(:first-child) {
     max-width: 760px;
     color: var(--text-soft);
     font-size: 1.02rem;
@@ -188,12 +192,12 @@ section > p:not(:first-child) {
 /* 6. HERO */
 #home {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 720px;
+    display: block;
+    min-height: 0;
     overflow: hidden;
+    padding: 0;
 }
+
 
 #home::before,
 #home::after {
@@ -219,12 +223,12 @@ section > p:not(:first-child) {
     background: radial-gradient(circle, rgba(139, 92, 246, 0.12), transparent 65%);
 }
 
-#home > * {
+#home>* {
     position: relative;
     z-index: 1;
 }
 
-#home > p:first-child {
+#home>p:first-child {
     margin-bottom: 22px;
     color: var(--accent);
     font-size: 0.78rem;
@@ -252,7 +256,7 @@ section > p:not(:first-child) {
     letter-spacing: -0.02em;
 }
 
-#home > p:nth-of-type(2) {
+#home>p:nth-of-type(2) {
     max-width: 620px;
     margin-bottom: 36px;
     color: var(--text-soft);
@@ -260,13 +264,13 @@ section > p:not(:first-child) {
 }
 
 /* 7. HERO BUTTONS */
-#home > div {
+#home>div {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
 }
 
-#home > div a {
+#home>div a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -280,22 +284,22 @@ section > p:not(:first-child) {
         border-color var(--transition);
 }
 
-#home > div a:first-child {
+#home>div a:first-child {
     color: var(--bg);
     background: var(--text);
     border-color: var(--text);
 }
 
-#home > div a:last-child {
+#home>div a:last-child {
     color: var(--text);
     background: rgba(255, 255, 255, 0.04);
 }
 
-#home > div a:hover {
+#home>div a:hover {
     transform: translateY(-3px);
 }
 
-#home > div a:last-child:hover {
+#home>div a:last-child:hover {
     border-color: var(--border-accent);
     background: rgba(110, 231, 255, 0.06);
 }
@@ -312,8 +316,8 @@ section > p:not(:first-child) {
     gap: 20px;
 }
 
-#explore > p:first-child,
-#explore > h2 {
+#explore>p:first-child,
+#explore>h2 {
     grid-column: 1 / -1;
 }
 
@@ -461,7 +465,7 @@ section > p:not(:first-child) {
     letter-spacing: -0.025em;
 }
 
-.content-card > p {
+.content-card>p {
     color: var(--text-soft);
     font-size: 0.92rem;
 }
@@ -655,7 +659,7 @@ section > p:not(:first-child) {
     text-align: center;
 }
 
-#creator > p:not(:first-child),
+#creator>p:not(:first-child),
 #creator h2 {
     margin-inline: auto;
 }
@@ -665,7 +669,7 @@ section > p:not(:first-child) {
     text-align: center;
 }
 
-#contact > p:not(:first-child) {
+#contact>p:not(:first-child) {
     margin-inline: auto;
 }
 
@@ -749,7 +753,7 @@ footer {
         min-height: 70px;
     }
 
-    main > section {
+    main>section {
         padding: 85px 0;
     }
 
@@ -761,8 +765,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    #explore > p:first-child,
-    #explore > h2 {
+    #explore>p:first-child,
+    #explore>h2 {
         grid-column: auto;
     }
 
@@ -784,33 +788,13 @@ footer {
 }
 
 @media (max-width: 650px) {
-    header nav {
-        width: min(calc(100% - 28px), var(--max-width));
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 12px;
-        padding: 15px 0;
-    }
-
-    header ul {
-        width: 100%;
-        gap: 20px;
-        overflow-x: auto;
-        padding: 0 2px 5px;
-        scrollbar-width: none;
-    }
-
-    header ul::-webkit-scrollbar {
-        display: none;
-    }
 
     main,
     footer {
         width: min(calc(100% - 28px), var(--max-width));
     }
 
-    main > section {
+    main>section {
         padding: 70px 0;
     }
 
@@ -822,13 +806,13 @@ footer {
         font-size: clamp(3.2rem, 18vw, 5.5rem);
     }
 
-    #home > div {
+    #home>div {
         flex-direction: column;
         align-items: stretch;
         max-width: 280px;
     }
 
-    #home > div a {
+    #home>div a {
         width: 100%;
     }
 
@@ -879,6 +863,7 @@ footer {
     }
 }
 
+
 /* 22. REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -902,5 +887,321 @@ footer {
     .content-card:hover,
     .platform-card:hover {
         transform: none;
+    }
+}
+
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+#home.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+
+    width: 100%;
+    max-width: 1100px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 48px 24px;
+
+    text-align: left;
+}
+
+#home .hero-content {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#home .hero-content>p:first-child {
+    margin: 0 0 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+#home .hero-content h1 {
+    width: 100%;
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+#home .hero-content h2 {
+    margin: 0 0 16px;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+#home .hero-content>p:not(:first-child) {
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    text-align: left;
+}
+
+#home .hero-image {
+    flex: 0 0 240px;
+    width: 240px;
+    max-width: 100%;
+}
+
+#home .profile-photo {
+    display: block;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+}
+
+#home .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 100%;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 700px) {
+    #home.hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 32px 20px;
+    }
+
+    #home .hero-content {
+        flex: none;
+        width: 100%;
+    }
+
+    #home .hero-content>p:first-child {
+        font-size: 0.95rem;
+    }
+
+    #home .hero-content h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    #home .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    #home .hero-image {
+        flex: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #home .profile-photo {
+        width: 200px;
+        max-width: 100%;
+        height: 240px;
+    }
+
+    #home .hero-buttons a {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 360px) {
+    #home.hero {
+        padding: 24px 16px;
+    }
+
+    #home .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    #home .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #home .hero-buttons a {
+        text-align: center;
+    }
+}
+
+#resources {
+    margin-top: 0;
+    padding-top: 40px;
+}
+
+
+/* Modern Footer */
+
+.site-footer {
+    margin-top: 60px;
+    padding: 45px 8% 20px;
+    background: #111827;
+    color: #f9fafb;
+    text-align: center;
+}
+
+.footer-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.footer-brand span {
+    color: #60a5fa;
+}
+
+.footer-tagline {
+    margin: 10px 0 24px;
+    color: #d1d5db;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #60a5fa;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    padding-top: 18px;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+
+.footer-bottom p {
+    margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 35px 5% 18px;
+    }
+
+    .footer-links {
+        gap: 16px;
+    }
+}
+
+
+/* Reduce space between header and hero */
+#home.hero {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+
+/* Reduce space above the hero content */
+#home.hero {
+    padding-top: 12px;
+}
+
+
+
+/* Social and contact links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+
+
+/* RESPONSIVE NAVIGATION */
+.menu-toggle {
+    display: none;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    header nav {
+        position: relative;
+        min-height: 70px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        flex-shrink: 0;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0;
+        margin: 0;
+        overflow: visible;
+    }
+
+    header nav ul.is-open {
+        display: flex;
+    }
+
+    header nav ul li a {
+        display: block;
+        padding: 12px 8px;
     }
 }
